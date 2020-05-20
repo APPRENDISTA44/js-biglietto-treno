@@ -16,10 +16,12 @@ if (((isNaN(km)) || (isNaN(eta)))) {
     //eccezioni e stampa
     if (eta<18) {
       prezzo = prezzo - (prezzo/100)*20;
+      prezzo = Math.round(prezzo*100)/100;
       console.log(prezzo);
       document.getElementById('biglietto').innerHTML= 'Sei minorenne, devi pagare: ' + prezzo + '$';
     } else if (eta>=65) {
       prezzo = prezzo - (prezzo/100)*40;
+      prezzo = Math.round(prezzo*100)/100;
       console.log(prezzo);
       document.getElementById('biglietto').innerHTML= 'Sei anziano, devi pagare: ' + prezzo + '$';
     } else {
