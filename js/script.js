@@ -25,6 +25,7 @@ if (((isNaN(km)) || (isNaN(eta)))) {
       console.log(prezzo);
       document.getElementById('biglietto').innerHTML= 'Sei anziano, devi pagare: ' + prezzo + '$';
     } else {
+      prezzo = Math.round(prezzo*100)/100;
       document.getElementById('biglietto').innerHTML= 'Devi pagare: ' + prezzo + '$';
     }
 }
